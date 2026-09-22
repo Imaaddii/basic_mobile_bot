@@ -1,0 +1,631 @@
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="urdf_tutorial">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.39706 0.0021613 -0.1492"
+        rpy="0 0 0" />
+      <mass
+        value="53.597" />
+      <inertia
+        ixx="1.4604"
+        ixy="-5.809E-05"
+        ixz="-0.00014898"
+        iyy="0.96382"
+        iyz="-2.7267E-08"
+        izz="2.0827" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tutorial/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.32941 0.33725 0.34902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tutorial/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="LeftWheel">
+    <inertial>
+      <origin
+        xyz="-8.8299E-17 0.0004924 -1.3809E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.50154" />
+      <inertia
+        ixx="0.00078545"
+        ixy="1.4208E-18"
+        ixz="-1.394E-20"
+        iyy="0.0014958"
+        iyz="7.1057E-19"
+        izz="0.00078553" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tutorial/meshes/LeftWheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.73725 0.77647 0.8 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tutorial/meshes/LeftWheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LeftWheel"
+    type="continuous">
+    <origin
+      xyz="0 0.274007595096939 -0.287999999999999"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="LeftWheel" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="10"
+      velocity="10" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="RightWheel">
+    <inertial>
+      <origin
+        xyz="8.7397E-17 -0.0004924 -1.3809E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.50154" />
+      <inertia
+        ixx="0.00078545"
+        ixy="-7.1793E-19"
+        ixz="2.9895E-20"
+        iyy="0.0014958"
+        iyz="-7.0116E-19"
+        izz="0.00078553" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tutorial/meshes/RightWheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.73725 0.77647 0.8 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tutorial/meshes/RightWheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightWheel"
+    type="continuous">
+    <origin
+      xyz="0 -0.274007595096459 -0.287999999999999"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RightWheel" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="10"
+      velocity="10" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="LeftFront">
+    <inertial>
+      <origin
+        xyz="-0.0017825 -3.4053E-07 -0.017618"
+        rpy="0 0 0" />
+      <mass
+        value="0.043191" />
+      <inertia
+        ixx="4.3814E-05"
+        ixy="8.8182E-12"
+        ixz="-5.0448E-06"
+        iyy="4.9781E-05"
+        iyz="-8.2252E-11"
+        izz="5.2179E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tutorial/meshes/LeftFront.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.94902 0.94902 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tutorial/meshes/LeftFront.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LeftFront"
+    type="continuous">
+    <origin
+      xyz="0.818500000000096 0.244000000000239 -0.259"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="LeftFront" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="10"
+      velocity="10" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="CasterLeftFront">
+    <inertial>
+      <origin
+        xyz="0 2.7756E-17 2.1684E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.12378" />
+      <inertia
+        ixx="6.1376E-05"
+        ixy="-5.0211E-20"
+        ixz="3.9987E-21"
+        iyy="9.613E-05"
+        iyz="3.0478E-21"
+        izz="6.1376E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tutorial/meshes/CasterLeftFront.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.65882 0.60784 0.52941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tutorial/meshes/CasterLeftFront.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="CasterLeftFront"
+    type="fixed">
+    <origin
+      xyz="-0.0374999999996312 0 -0.0745"
+      rpy="0 0 0" />
+    <parent
+      link="LeftFront" />
+    <child
+      link="CasterLeftFront" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      effort="10"
+      velocity="10" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="RightFront">
+    <inertial>
+      <origin
+        xyz="-0.0017825 -3.4053E-07 -0.017618"
+        rpy="0 0 0" />
+      <mass
+        value="0.043191" />
+      <inertia
+        ixx="4.3814E-05"
+        ixy="8.8182E-12"
+        ixz="-5.0448E-06"
+        iyy="4.9781E-05"
+        iyz="-8.2252E-11"
+        izz="5.2179E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tutorial/meshes/RightFront.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.94902 0.94902 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tutorial/meshes/RightFront.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightFront"
+    type="continuous">
+    <origin
+      xyz="0.8185 -0.244 -0.259"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RightFront" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="10"
+      velocity="10" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="CasterRightWheelFront">
+    <inertial>
+      <origin
+        xyz="1.1102E-16 -8.3267E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.12378" />
+      <inertia
+        ixx="6.1376E-05"
+        ixy="4.4916E-18"
+        ixz="-7.0233E-21"
+        iyy="9.613E-05"
+        iyz="3.5502E-20"
+        izz="6.1376E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tutorial/meshes/CasterRightWheelFront.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.65882 0.60784 0.52941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tutorial/meshes/CasterRightWheelFront.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="CasterRightWheelFront"
+    type="continuous">
+    <origin
+      xyz="-0.0375 0 -0.0745"
+      rpy="0 0 0" />
+    <parent
+      link="RightFront" />
+    <child
+      link="CasterRightWheelFront" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="10"
+      velocity="10" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="Left_Back">
+    <inertial>
+      <origin
+        xyz="-0.0017825 -3.4053E-07 -0.017618"
+        rpy="0 0 0" />
+      <mass
+        value="0.043191" />
+      <inertia
+        ixx="4.3814E-05"
+        ixy="8.8182E-12"
+        ixz="-5.0448E-06"
+        iyy="4.9781E-05"
+        iyz="-8.2252E-11"
+        izz="5.2179E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tutorial/meshes/Left_Back.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.94902 0.94902 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tutorial/meshes/Left_Back.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left_Back"
+    type="continuous">
+    <origin
+      xyz="-0.8185 0.244 -0.259"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Left_Back" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="10"
+      velocity="10" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="LeftBackCasterWheel">
+    <inertial>
+      <origin
+        xyz="0 0.016 2.1684E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.12378" />
+      <inertia
+        ixx="6.1376E-05"
+        ixy="-1.4938E-21"
+        ixz="2.8577E-21"
+        iyy="9.613E-05"
+        iyz="2.3329E-21"
+        izz="6.1376E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tutorial/meshes/LeftBackCasterWheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.65882 0.60784 0.52941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tutorial/meshes/LeftBackCasterWheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LeftBackCasterWheel"
+    type="continuous">
+    <origin
+      xyz="-0.0375 -0.016 -0.0745"
+      rpy="0 0 0" />
+    <parent
+      link="Left_Back" />
+    <child
+      link="LeftBackCasterWheel" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="10"
+      velocity="10" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="RightBack">
+    <inertial>
+      <origin
+        xyz="-0.0017825 -3.4053E-07 -0.017618"
+        rpy="0 0 0" />
+      <mass
+        value="0.043191" />
+      <inertia
+        ixx="4.3814E-05"
+        ixy="8.8182E-12"
+        ixz="-5.0448E-06"
+        iyy="4.9781E-05"
+        iyz="-8.2252E-11"
+        izz="5.2179E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tutorial/meshes/RightBack.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.94902 0.94902 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tutorial/meshes/RightBack.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightBack"
+    type="continuous">
+    <origin
+      xyz="-0.8185 -0.244 -0.259"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RightBack" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="10"
+      velocity="10" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="RightBackCasterWheel">
+    <inertial>
+      <origin
+        xyz="0 2.7756E-17 1.7347E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.12378" />
+      <inertia
+        ixx="6.1376E-05"
+        ixy="-5.0211E-20"
+        ixz="3.9987E-21"
+        iyy="9.613E-05"
+        iyz="1.9749E-21"
+        izz="6.1376E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tutorial/meshes/RightBackCasterWheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.65882 0.60784 0.52941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tutorial/meshes/RightBackCasterWheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightBackCasterWheel"
+    type="continuous">
+    <origin
+      xyz="-0.0375 0 -0.0745"
+      rpy="0 0 0" />
+    <parent
+      link="RightBack" />
+    <child
+      link="RightBackCasterWheel" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+</robot>
